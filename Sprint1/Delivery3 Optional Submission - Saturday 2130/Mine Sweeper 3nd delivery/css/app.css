@@ -1,0 +1,317 @@
+body {
+    background-color: #f2f2f200;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.game-container {
+    background-color: #f2f2f26e;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.smiley {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.board-container {
+    margin-block: 10px;
+    margin-left: 10px;
+}
+
+.status-container {
+    
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.status-item {
+    margin-block: 10px;
+    background-color: #cacaca33;
+    padding: 8px;
+    border-radius: 15px;
+    text-align: center;
+    color: #eedd45;
+    margin-inline: 10px;
+}
+
+
+.timer, .lives, .hints-left{
+    
+    text-align: center;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ee4444;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    width: 30px; 
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+td.default-hover:hover {
+    background-color: #ccc;
+}
+
+.mega-hint-hover:hover {
+    background-color: #df9d23;
+}
+
+.clicked-cell {
+    background-color: #ccc;
+}
+
+.clicked-mine {
+    background-color: #f00;
+    color: #fff;
+    font-weight: bold;
+}
+
+.reset-button {
+    background-color: #2d303fda;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #999;
+}
+
+.difficulty-buttons {
+    background-color: #ecee75da;
+    color: #d11919;
+    border: none;
+    padding: 6px 10px; /* Adjusted padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 12px; /* Adjusted font size */
+    margin: 5px; /* Adjusted margin */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.difficulty-buttons button {
+    background-color: #c0c0c0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.difficulty-buttons button:hover {
+    background-color: #999;
+}
+
+/* Beginner button */
+.difficulty-buttons .beginner {
+    background-color: #4CAF50; 
+}
+
+/* Medium button */
+.difficulty-buttons .medium {
+    background-color: #2196F3;
+}
+
+/* Expert button */
+.difficulty-buttons .expert {
+    background-color: #f51c1c;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.hint-button {
+    background-color: #bbb;
+    color: #333;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hint-button-hover:hover {
+    background-color: #bebe8f86;
+}
+
+.hint-button-clicked {
+    background-color: #fff128;
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.hint-button:hover:not(.hint-button-clicked) {
+    background-color: #d8d7a1;
+}
+
+.safe-cell, #current-score {
+    background-color: rgb(53, 228, 47);
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    padding: 1px 1px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.safe-click-button {
+    font-weight: bold;
+    background-color: rgb(53, 228, 47);
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.dark-mode-button {
+    background-color: #6e6d6d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.dark-mode-button:hover {
+    background-color: #555;
+}
+
+.undo-button, .place-button {
+    margin: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.undo-button:hover, .place-button:hover {
+    background-color: #05cf0b;
+}
+
+.undo-button {
+    margin-left: 10px;
+}
+
+.place-button.manual-mode-on {
+    background-color: #ffcc00;
+    color: #000000;
+}
+
+.mega-hint-button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mega-hint-cell {
+    background-color: #ffff66b9
+}
+.mega-hint-button.mega-hint-active {
+    background-color: #c92721;
+    color: #ff6600;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body onload="onInit()">
+    <p>Minesweeper</p>
+    <footer>
+        <p>Created by Eidan Baruch</p>
+    </footer>
+
+    <div>
+        <button class="safe-click-button" onclick="onSafeClick()">Safe Click</button>
+        <button class="hint-button" onclick="onHintButtonClick()">💡</button>
+        <button class="reset-button" onclick="resetGame()"><span1>😃</span1></button>    
+
+    </div>
+
+    <div class="status-container">
+        <div class="status-item">
+            <p>Timer</p>
+            <span class="timer"></span>
+        </div>
+
+        <div class="status-item">
+            <p>Hints</p>
+            <span class="hints-left"></span>
+        </div>
+
+        <div class="status-item">
+            <p>Lives</p>
+            <span class="lives"></span>
+        </div>
+    </div>
+
+    <p>Score: <span id="current-score">0</span></p>
+
+    <div class="container">
+        <button class="place-button" onclick="toggleManualMode()">Place</button>
+        <div class="board-container"></div>
+        <button class="undo-button" onclick="undo()">Undo</button>
+    </div>
+
+    <p>Best score: <span id="best-score">0</span></p>
+    
+    <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+    <div class="difficulty-buttons">
+        <button class="beginner" onclick="setLevel('beginner')">Beginner</button>
+        <button class="medium" onclick="setLevel('medium')">Medium</button>
+        <button class="expert" onclick="setLevel('expert')">Expert</button>
+    </div>    
+
+    <button class="mega-hint-button" onclick="onMegaHint()">Mega Hint</button>
+    <td class="mega-hint-cell"></td>
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/hints.js"></script>
+    <script src="js/bestscore.js"></script>
+    <script src="js/megahint.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body onload="onInit()">
+    <p>Minesweeper</p>
+    <footer>
+        <p>Created by Eidan Baruch</p>
+    </footer>
+
+    <button class="hint-button" onclick="onHintButtonClick()">💡</button>
+    <button class="reset-button" onclick="resetGame()"><span1>😃</span1></button>    
+    <div class="status-container">
+        <div class="status-item">
+            <p>Timer</p>
+            <span class="timer"></span>
+        </div>
+
+        <div class="status-item">
+            <p>Hints</p>
+            <span class="hints-left"></span>
+        </div>
+
+        <div id="best-score"></div>
+
+        <div class="status-item">
+            <p>Lives</p>
+            <span class="lives"></span>
+        </div>
+    </div>
+    
+    <div class="level-buttons">
+        <button onclick="setLevel('beginner')">Beginner</button>
+        <button onclick="setLevel('medium')">Medium</button>
+        <button onclick="setLevel('expert')">Expert</button>
+    </div>
+
+    <div class="container">
+        <button class="place-button" onclick="toggleManualMode()">Place</button>
+        <div class="board-container"></div>
+        <button class="undo-button" onclick="undo()">Undo</button>
+    </div>
+
+
+    <button class="safe-click-button" onclick="onSafeClick()">Safe Click</button>
+    <div class="safe-click-count">Safe Clicks Left: <span id="safeClickCount">3</span></div>
+
+    
+    <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/hints.js"></script>
+</body>
+
+</html>

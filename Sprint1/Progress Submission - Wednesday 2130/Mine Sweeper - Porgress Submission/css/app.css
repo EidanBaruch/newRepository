@@ -1,0 +1,199 @@
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.game-container {
+    background-color: #f2f2f2;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.status-bar {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+.smiley {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.board-container {
+    margin-top: 20px;
+    display: grid;
+    gap: 4px;
+}
+
+.status-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.status-item {
+    background-color: #f2f2f2;
+    padding: 8px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.timer, .lives, .hints-left{
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    width: 30px; 
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #ccc;
+}
+
+.clicked-cell {
+    background-color: #ccc;
+}
+
+.clicked-mine {
+    background-color: #f00;
+    color: #fff;
+    font-weight: bold;
+}
+
+.reset-button {
+    background-color: #2d303fda;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #999;
+}
+
+.difficulty-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.difficulty-buttons button {
+    background-color: #c0c0c0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.difficulty-buttons button:hover {
+    background-color: #999;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.hint-button {
+    background-color: #bbb;
+    color: #333;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hint-button-hover:hover {
+    background-color: #bebe8f86;
+}
+
+.hint-button-clicked {
+    background-color: #fff128;
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.hint-button:hover:not(.hint-button-clicked) {
+    background-color: #d8d7a1;
+}
+
+.safe-cell {
+    background-color: rgb(53, 228, 47);
+    color: #fff;
+    font-weight: bold;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.safe-click-button{
+
+    padding: 4px 4px;
+    margin: 10;
+    font-weight: bold;
+    background-color: rgb(53, 228, 47);
+}
